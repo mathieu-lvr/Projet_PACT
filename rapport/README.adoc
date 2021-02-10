@@ -1,0 +1,97 @@
+= Rapport d’avancement du groupe 3.5
+PACT groupe 35
+ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
+:doctype: book
+:stem: latexmath
+:source-highlighter: coderay
+:toc-title: Table des matières
+:toc: macro
+:sectnums:
+:imagesdir: images
+
+
+// Partie non numérotée
+:sectnums!:
+== « Recocrew »
+
+=== Membres du Recocrew
+
+* GUILLOTEAU Corentin
+* IVERSENC Patrick 
+* KENNEDY Charlotte
+* LABAYE Domitille
+* NGUYEN NGOC Théo
+* OLIVIER Mathieu
+* de PORCARO Loïc 
+
+=== Tuteur
+
+* Roux Michel
+
+=== Encadrant génie logiciel
+
+* Fiandrotti Attilio
+
+== Résumé du sujet choisi en français
+
+Recocup est un distributeur d'Ecocup. Mais qu'est-ce qu'un Ecocup ? Un écocup est un gobelet réutilisable en plastique. C'est donc une façon de s'émanciper des gobelets en plastique jetables.
+Bien évidemment, nous ne facturons pas l'Ecocup. Nous ne faisons payer qu'une caution lors de l'inscription initial. Si l'utilisateur ramène son Ecocup, il récupère sa caution sous la forme d'un crédit. C'est tout simplement un prêt d'Ecocup. S’il ne le ramène pas il perd sa caution.
+Un écran lié à Recocup permet de se connecter manuellement à son compte. L'utilisateur voit alors le nombre de crédit qu'il a et s'il n'en a plus, il peut recharger son compte via un payement Lydia. S’il a son téléphone, il peut se connecter sur notre application et alors voir sur son téléphone son nombre de crédit.
+Toutes ces données sont répertoriées sur une base de données sur le serveur pour que toutes les écoles puissent y connecter.
+Si l’utilisateur dispose de crédits et qu'il veut retirer un Ecocup, le serveur/l'application génère un QR-code qui est envoyé vers Recocup pour qu'il puisse être reconnu.
+Dans la mesure où ce projet vise à faire disparaitre les gobelets jetables, polluants à tel point que l’Union Européenne essaye de les bannir définitivement en 2020, il rentre dans le cadre environnemental de MAD.  De plus, il incite l’utilisateur à avoir un comportement plus « vert » en favorisant l’utilisation d’un gobelet non polluant.
+
+== English Summary
+Recocup is simply an Ecocup distributor. But what exactly is an Ecocup? It is a reusable plastic cup. As a matter of fact, Recocup is a way to banish disposable plastic cups which are very polluting.
+Of course, the client doesn’t have to pay for each cup. We will only ask for money as they sign in, as a deposit. If the user brings back the cup, we will get his deposit back as a credit on the data base. It is simply an ecocup rent. If he doesn’t bring back his cup, he will definitely lose his deposit.
+Recocup will have a screen within it. It will allow the user to log in directly, and thus seeing his credits. If he doesn’t have any, he can refill his account by doing a Lydia transfer. If, by any chance, he has his phone on hand, he can directly log in on his phone, having access to his points.
+This DATA is classified on a data base within the server so that all Saclay’s schools have access to it.
+If the user has credits, and wants to withdraw a cup, the server/app creates a QR-code which is then sent to the Recocup to be finally matched. (Verify that the QR-code presented to Recocup is the one linked to the account.)
+As this project aims to make plastic desposable cups disappear, which are a threat for the environment as the European Union tried to banish it in 2020, Recocup definitely meets the environmental division of MAD’s demand. Moreover, this project stimulates one’s behavior to be greener as he uses reusable cups.
+
+// en PDF on ne peut pas controler la position de la toc
+// Macros non supportées
+ifndef::backend-pdf[]
+== Table des matières
+:toc-title:
+toc::[]
+endif::[]
+
+// On numérote le reste des sections
+:sectnums:
+
+== Étude d’antériorité et justification de la proposition
+
+include::proposition/proposition.adoc[Description de la proposition]
+
+include::proposition/etat-de-l-art.adoc[Description de l’état de l’art]
+
+== Scénarios d’usage (PAN1)
+
+include::scenario/scenario.adoc[Scénarios d’usage]
+
+<<<
+
+== Architecture du projet
+include::architecture/schema.adoc[Schéma d’architecture]
+
+include::architecture/interfaces.adoc[Description des interfaces]
+
+include::architecture/ihm.adoc[Interface utilisateur graphique]
+
+<<<
+
+== Organisation du projet
+
+include::organisation/planification.adoc[Diagramme de planification temporel des tâches]
+
+include::organisation/repartition.adoc[Répartition des élèves par module]
+
+<<<
+
+[bibliography]
+== Bibliographie
+
+include::References.adoc[Bibliographie]
+
+<<<

@@ -1,0 +1,21 @@
+=== Répartition des élèves par module
+
+[cols=",^,^,^,^,^,^,^,^",options="header",]
+|====
+| Nom        | Arduino & construction machine | Mise en oeuvre interface Web | Interface utilisateur graphique | Base de données | Smartphone & application Android | Communication client-serveur  | Test & Intégration | Module SES
+| Nom Expert |     Ulrich Khüne     |     Jean-Claude Dufourd    |   Jean-Claude Dufourd      |  Antoine Amarilli    |    Jean-Claude Dufourd     |     Jean-Claude Moissinac      | Attilio Fiandrotti  | Myriam Davidovici
+
+| Corentin Guilloteau   |        |         |         |         |         |       X     |X | X
+
+| Charlotte Kennedy  |         |   X     |         |    X     |         |            |  | X
+
+| Mathieu Olivier     |    X     |         |     X    |         |         |            | | X
+
+| Domitille Labaye     |       |         |         |    X     |     X    |            | | X
+
+| Théo Nguyen    |         |         |     X    |         |         |            |X | X
+
+| Patrick Iversenc     |         |    X     |         |         |         |     X       | | X
+
+| Loïc de Porcaro     |    X     |       |         |         |     X    |            |  | X
+|====

@@ -1,0 +1,8 @@
+*_Note : Liste des références exploitées. Une référence complète
+donne titre, auteur(s), date, journal, revue, source de publication,
+titre de conférence, numéro, pages. Une webographie est aussi
+envisageable : titre, auteur, date, page web_*
+
+* [[M2Key]][1] *M2Key™* : https://www.cloud-connecte.com/controle-des-points-de-vente/
+* [[CleanCup]][2] *CleanCup®* : http://www.clean-cup.com/
+* [[Ecocollectoor]][3] *Ecocollectoor* : http://eco-collectoor.com/#solutions_24_

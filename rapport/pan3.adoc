@@ -1,0 +1,85 @@
+= Rapport d’avancement du groupe 3.5 - PAN3
+ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
+:doctype: book
+:stem: latexmath
+:source-highlighter: coderay
+:toc-title: Table des matières
+:toc: macro
+:sectnums:
+:imagesdir: images
+
+
+// Partie non numérotée
+:sectnums!:
+// en PDF on ne peut pas controler la position de la toc
+// Macros non supportées
+ifndef::backend-pdf[]
+== Table des matières
+:toc-title:
+toc::[]
+endif::[]
+
+// On numérote le reste des sections
+:sectnums:
+
+== Tâches réalisées
+
+=== Module Base de données (Domitille & Charlotte)
+
+Le module Base de données est bien avancé, en effet, pour le moment nous avons créé la base de donnée en SQLlite. Elle est composée de trois tables : Utilisateurs, Transactions (garder une trace de tous les dépôts et retraits effectués) et Machines. Après avoir listé l’intégralité des requêtes SQL nécessaires au projet, nous les avons traduites et intégrées dans le code en JAVA, et avons effectué quelques tests sur ces requêtes. De plus, il existe une fonction de hachage connue du serveur et des machines pour assurer la sécurité des mots de passe.
+
+=== Module Android (Domitille & Loïc)
+
+Pour le module Android, nous avons créé l’application qui va permettre à chaque utilisateur de faire un dépôt ou un retrait d’Ecocup depuis son téléphone. L’utilisateur rentre ses identifiants de son école pour rentrer dans son profil. Il peut sur son téléphone afficher un QRcode en cas de retrait ou dépôt. 
+
+=== Module Arduino (Loïc & Mathieu)
+
+Pour ce module nous avons commencé par écrire le code en C pour les mouvements (dépôts et retrait de verre) lisible par la carte arduino. Une fois que nous étions familiarisé avec l’utilisation d’une carte Arduino nous nous sommes tourné vers la communication vers cette dernière en JAVA à l’aide de la bibliothèque RXTX. Puis nous avons presque fini la construction d’un prototype simple et grossier mais ayant pour but de tester nos mouvements. Cela fonctionnait bien.
+
+=== Interface Graphique (Théo & Mathieu)
+
+Le module IHM arrive à terme, avec une interface graphique adaptée et quasi-prête à être utilisée sur la machine prototype. Les différents problèmes causés par le stockage des données nécessaires ont été résolus. De plus, un sous-module « QR Code » a été greffé au module IHM et permet dorénavant de générer et surtout de reconnaître des QR Codes à l’aide de la webcam d’un ordinateur, ce qui pourra être adapté en munissant simplement la machine d’une caméra. Ce dispositif permettra d’accélérer le processus pour le consommateur, s’il a son téléphone au moment de retirer une cup, réduisant ainsi significativement le temps d’attente global.
+
+=== Mise en oeuvre d'une interface web (Charlotte & Patrick)
+
+Ce module est presque achevé dans la mesure où nous avons créer un site grâce à node js fonctionnel. Qui plus est, ce site est directement lié à la base de donnée et avons créé les principales fonctionnalités du site web. (se connecter, créer un compte, modifier un compte, supprimer un compte.) 
+
+=== Communication client serveur (Corentin & Patrick)
+
+Nous avons mis au point la communication entre le serveur et l'application et entre le serveur et la page web. Le lien entre la machine et le serveur est presque terminé.
+
+=== Test et intégration (Corentin & Théo)
+
+Le module T+I est en cours de finalisation, puisque les différents modules nous ont fournis leur travail achevé. L’intégration entre les différents modules est donc quasiment achevée, et une fois le prototype physique terminé, ce qui est compliqué à faire pour nous en télétravail, nous aurons un produit fonctionnel.
+
+== Objectifs PAN4
+
+=== Module Base de données (Domitille & Charlotte)
+
+Pour la suite du module et en vue du PAN4, nous envisageons d'ajouter un statut élève/administrateur pour chaque Utilisateur dans la BDD. 
+
+=== Module Android (Domitille & Loïc)
+
+Pour la suite du module, nous aimerions ajouter l’option de demander à quelle machine se connecter quand on rentre dans l’application (pour le cas où il y aurait plusieurs machines en fonctionnement). Nous aimerions aussi faire un profil différent pour les administrateurs, avec surement une alerte quand une des machines n’a plus d’Ecocup et qu’elle doit être rechargée. 
+
+=== Module Arduino (Loïc & Mathieu)
+
+Pour ce module, il nous reste à fabriquer la machine finale en y intégrant tout ce que nous avons fait précédemment. 
+
+=== Interface Graphique (Théo & Mathieu)
+
+Pour ce module, il ne reste que quelques correctifs et ameliorations mineures à apporter.
+
+=== Mise en oeuvre d'une interface web (Charlotte & Patrick)
+
+Nous ne nous sommes pas attardés à tout l’aspect esthétique de notre site web. Nous devons donc encore nous concentrer sur toute la partie CSS de la création d’un site web. Nous avions aussi prévu l’utilisation de token que nous n’avons pas encore mis en place.
+Pour finir, nous pensons améliorer notre site en créant un espace dédié aux admins.
+
+
+=== Communication client serveur (Corentin & Patrick)
+
+Pour le PAN4, il restera à terminer le lien entre le serveur et la machine anqi qu'à implémenter les requêtes nécessaires à d’éventuelles fonctionnalitées supplémentaires en fonction des besoins des autres modules. La base étant déjà en place, cela devrait être assez aisé. 
+
+=== Test et intégration (Corentin & Théo)
+
+Concernant le travail accomplissable jusqu’au PAN4, nous pensons améliorer le prototype, fluidifier les différents échanges de données pour que la machine soit plus efficace et travailler si possible sur l’esthétique globale des interfaces amenées à être présentées à l’utilisateur.

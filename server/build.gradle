@@ -1,0 +1,44 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+    id 'jacoco'
+    id 'application'
+}
+version '0.1'
+
+group = "."
+sourceCompatibility = 1.8
+
+mainClassName='logic.Main'
+
+repositories {
+    mavenCentral()
+}
+
+run {
+    args += 'C:\\Users\\Charlotte\\Documents\\Travail\\PACT\\pact35\\data\\test.db'
+}
+
+dependencies {
+    compile group:'org.xerial', name:'sqlite-jdbc'
+    compile group: 'com.kosprov.jargon2', name: 'jargon2-api', version: '1.1.1'
+    compile group: 'com.kosprov.jargon2', name: 'jargon2-native-ri-backend', version: '1.1.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.5'
+    testCompile group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.5'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        exceptionFormat = 'full'
+    }
+
+}

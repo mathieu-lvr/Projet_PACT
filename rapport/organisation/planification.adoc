@@ -1,0 +1,33 @@
+=== Planning temporel PACT
+
+==== Taches / PAN1 13/11/19
+
+===== Générales
+
+* rapport:
+
+[cols=",^,^,,",options="header",]
+|====
+|Tâche |Qui |Quand |Fait |Remarques
+|sujet |Patrick Iversenc | 6 novembre 2019| Oui |
+|sujet en anglais |Patrick Iversenc |6 novembre 2019 | Oui |
+|scenario | Ensemble du groupe  | Semaine du 14 octobre | Oui |
+|architecture (schéma et documentation) | Corentin Guilloteau, Mathieu Olivier, Théo Nguyen | Semaine du 4 novembre | Oui |
+|découpage en modules | Ensemble du groupe | Mois d'octobre | Oui | 
+|Logo | Mathieu Olivier | 6 novembre 2019 | Oui |
+|Bibliographie | Charlotte Kennedy | 6 novembre 2019 | Oui |
+|Schéma design de l'application | Domitille Labaye | 6 novembre 2019 | Oui |
+|Schéma design de l'interface | Mathieu Olivier | 6 novembre 2019 | Oui |
+|Etude d'antériorité | Théo Nguyen | 6 novembre 2019 | Oui |
+|planning temporel (ce document, personnalisé) | Domitille Labaye | 7 novembre 2019 | Oui |
+|====
+
+* présentation 15mn
+
+[cols=",^,^,,",options="header",]
+|====
+|Tâche |Qui |Quand |Fait |Remarques
+|préparation du document |Charlotte Kennedy & Mathieu Olivier | 07/11/2019| oui |
+|répartition de la parole |Domitille Labaye & Théo Nguyen | 07/11/2019 | oui|
+|répétition |Tout le monde | 08/11/2019 | oui|
+|====

@@ -1,0 +1,189 @@
+Description des interfaces
+
+
+Serveur distant
+
+    • getUserById(int userId) :  IUser
+      Trouve l'utilisateur à partir de son identifiant. 
+      Test : -si l'on utilise un identifiant correct, obtient-on le bon utilisateur?
+             -sinon, a-t-on un message d'erreur adapté?
+    • getUserByMail(String mail) :  IUser
+      Trouve l'utilisateur à partir de son adresse mail. 
+      Test : -si l'on utilise une adresse mail correcte, obtient-on le bon utilisateur?
+             -sinon, a-t-on un message d'erreur adapté?
+    • isStringUsed(int mail) :  bool
+      Est-ce que l'adresse mail appartient à la BDD?
+      Test : on vérifie que le résultat est cohérent avec la réalité. Le langage SQL est a priori suffisamment solide.
+    • getUserById(int userId) :  IUser
+      Trouve l'utilisateur à partir de son identifiant. 
+      Test : -si l'on utilise un identifiant correct, obtient-on le bon utilisateur?
+             -sinon, a-t-on un message d'erreur adapté?
+    • addUser(IUser user) :  IUser
+      Ajoute l'utilisateur à la BDD.
+      Test : On vérifie que l'utilisateur est bien ajouté en essayant de récupérer des infos sur lui grâce à une des méthodes ci-dessus.
+    • updateUser(IUser user) :  void
+      Met à jour les données de l'utilisateur dans la BDD.
+      Test : On vérifie que les données de l'utilisateur sont bien mises à jour en essayant de récupérer de les récupérer grâce à une des méthodes ci-dessus.
+    • removeUser(IUser user) :  void
+      Retire l'utilisateur de la BDD.
+      Test : On vérifie que l'utilisateur n'est plus dans la BDD en essayant de récupérer des infos sur lui grâce à une des méthodes ci-dessus. On est censé arriver dans un des cas d'échec.
+    • getConnexionTokenByUserId(int userId) :  IConnexionToken
+      Récupère les identifiants de connexion de l'utilisateur.
+      Test : - si l'utilisateur est dans la base de données : on compare les résultats de cette méthode, avec ce que contient la base de données (à l'aide d'une requête SQL).
+             - sinon, on retourne un message d'erreur adapté.
+    • setAdmin(IUser user) :  void
+      Ajoute l'utilisateur à la liste des administrateurs.
+      Test : -Si l'utilisateur est dans la BDD : On vérifie que l'utilisateur n'est pas déjà administrateur : S'il ne l'est pas : On vérifie que l'utilisateur est bien ajouté en examinant la valeur de la colonne correspondante de la BDD.
+                                                                                                              S'il l'est : On informe que son statut est déjà à jour.
+             -Sinon, on retourne un message d'erreur adapté
+    • setAdmin(IUser user) :  void
+      Retire l'utilisateur de la liste des administrateurs.
+      Test : -Si l'utilisateur est dans la BDD : On vérifie que l'utilisateur est bien administrateur : S'il l'est : On vérifie que l'utilisateur est bien retiré en examinant la valeur de la colonne correspondante de la BDD.
+                                                                                                        S'il ne l'est pas : On informe que son statut est déjà à jour.
+             -Sinon, on retourne un message d'erreur adapté
+    • getMachineId() :  ArrayList<Integer>
+      Retourne l'identifiant de la machine
+      Test : On compare le résultat de cette méthode avec la valeur du champ correspondant dans la base de donnée par une requête SQL.
+    • getDistributorById(int distributorId) :  IDistributor
+      Retourne l'identifiant de la machine
+      Trouve la machine à partir de son identifiant. 
+      Test : -si l'on utilise un identifiant correct, obtient-on le bon distributeur?
+             -sinon, a-t-on un message d'erreur adapté?
+    • addDistributor(IDistributor user) :  IDistributor
+      Ajoute le distributeur à la BDD.
+      Test : On vérifie que le distributeur est bien ajouté en essayant de récupérer des infos sur lui grâce à une des méthodes ci-dessus.
+    • updateUser(IUser user) :  void
+      Met à jour les données de le distributeur dans la BDD.
+      Test : On vérifie que les données du distributeur sont bien mises à jour en essayant de récupérer de les récupérer grâce à une des méthodes ci-dessus.
+    • removeUser(IUser user) :  void
+      Retire le distributeur de la BDD.
+      Test : On vérifie que le distributeur n'est plus dans la BDD en essayant de récupérer des infos sur lui grâce à une des méthodes ci-dessus. On est censé arriver dans un des cas d'échec.
+    • getQRCodeByUserId(int userId) : ArrayList<IQRCode>
+      Retourne le QR Code associé au compte de l'utilisateur entré en argument.
+      Test : On vérifie que l'utilisateur appartient à la base de données. - Si oui, on retourne son QR Code, puis on vérifie qu'il est valide grâce à la méthode ci-dessous, et que c'est le bon en comparant avec une requête SQL.
+                                                                           - Sinon, on affiche un message d'erreur approprié.
+    • isQRCodeValid(IQRCode qr) : bool
+      Affirme si le QR Code présenté est le bon.
+      Test : Si le QR Code est correctement reconnu : on le compare à celui obtenu pour l'utilisateur correspondant grâce à la méthode ci-dessus. 
+             Si le résultat du test est négatif, on renvoie un message d'erreur adapté.
+
+Cette interface permet la communication entre les différents modules présents sur le serveur et la base de donnée.
+
+
+
+
+
+Zone distributeur - Requêtes
+
+
+
+
+    •	verifyQRCode(IQRCode qcode) : bool
+        Permet de vérifier si le QRCode passé en argument est bien associé à l'utilisateur courant et valide.
+        Test : On compare l'argument de cette fonction avec la valeur de retour de la fonction getQRCodeByUserId ci-dessus, évaluée en l'utilisateur courant, après avoir vérifié la validité du QRCode.
+    •   getUser(int UserId) : IUser 
+        Retourne l'utilisateur associé à l'identifiant. 
+        Test : -si l'on utilise un identifiant correct, obtient-on le bon utilisateur?
+             -sinon, a-t-on un message d'erreur adapté?
+    •	authorizeDistribution(IUser user, IQRCode code) : bool 
+        Permet de demander au serveur si la machine est autorisée à délivrer l'écocup, en vérifiant le QR Code grâce à la méthode ci-dessus.
+        Test :  On vérifie que l'utilisateur est dans la BDD. Si oui : on vérifie le QR Code et on retourne sa validité, ou non, auquel cas on affiche une erreur adaptée. Sinon : on affiche directement une erreur appropriée.
+    •	validateDistribution(IUser user) : void
+        Permet d'enregistrer la distribution auprès du serveur.o
+        Test : On vérifie que la distribution a bien eu lieu en effectuant une requête auprès de la BDD. Si ce n'est pas le cas, on informe l'utilisateur.
+    •	validateCupRecover(IUser user) : void
+        Permet d'enregistrer la récupération d'une écocup auprès du serveur.
+        Test : Idem que la méthode précédente mais dans l'autre sens.
+    •   logUser(String userName, String password) : bool 
+        Permet de connecter l'utilisateur en récupérant ses identifiants de connexion et en les comparant à ceux enregostrés dans la BDD.
+        Test : On doit d'abord vérifier si l'utilisateur est bien enregistré. Si ce n'est pas le cas, on l'invite à utiliser l'application ou le site pour se créer un compte. Si c'est le cas, il faut comparer son mot de passe d'après la BDD avec celui entré. S'il est correct, on retourne true; sinon on retourne false.
+
+
+
+
+
+
+Zone application - Requêtes
+
+
+    •	logUser(IAuthentificationData authData) : bool
+        Permet à un utilisateur de se connecter. 
+        Test : On doit vérifier que l'utilisateur est bien connecté. Avant cela, il faut vérifier la validité des identificants de l'utilisateur.
+    •   getUser(int UserId) : IUser 
+        Retourne l'utilisateur associé à l'identifiant. 
+        Test : -si l'on utilise un identifiant correct, obtient-on le bon utilisateur?
+             -sinon, a-t-on un message d'erreur adapté?
+    •	askForCup(IUser user) : IQRCode 
+        Cette méthode doit permettre la demande d'un QRCode pour récupérer une écocup.
+        Test : On vérifie que l'utilisateur appartient à la BDD. Ensuite, on essaie de récupérer son QRCode : si il est disponible, on le retourne. Sinon, on affiche un message d'erreur.
+    •   setUserInfo(IUser user) : void
+        Met à jour les informations de l'utilisateur.
+        Test : On effectue une requête à la BDD pour comparer les infos avec celles rentrées. 
+    •   setPassword(IUSer user, String password) : void
+        Met à jour le mot de passe de l'utilisateur.
+        Test : On doit vérifier que l'utilisateur existe dans la BDD. Si oui, on met à jour la BDD. Sinon : on retourne un message d'erreur.
+    •   createAccount(IUser user, String password) : void
+        Créer un compte à l'utilisateur, i.e. l'ajoute dans la BDD.
+        Test : on doit vérifier une fois la fonction terminée que l'utilisateur est bien dans la BDD à l'aide des fonctions ci-dessus.
+
+
+Cette interface permet de transmettre les requêtes de l’application reçues via le module communication client-serveur au reste du serveur.
+
+
+
+
+logUser doit permettre à un utilisteur de se connecter.
+
+
+askForCup doit permettre la demande d’un QRCode pour récupérer une écocup.
+
+
+
+
+
+
+
+Application
+
+
+Requêtes
+
+
+
+
+Cf Zone distributeur - Requête
+
+
+
+
+
+Distributeur
+
+
+Requêtes
+
+
+Cf Zone application -Requête
+
+
+
+
+Ordre
+
+•	deposit() : void
+    Doit lancer la procédure de dépôt d'une écocup.
+    Test : On doit vérifier que la cup a bien été déposée en fin de course.
+•	withdraw() : void
+    Doit lancer la procédure pour que l'utilisteur récupère une écocup.
+    Test : On doit vérifier que l'écocup a bien été retirée.
+•	isEmpty() : void 
+    Permet de savoir si la machine est vide.
+•	isFull() : void
+    Permet de savoir si la machine est pleine.
+
+
+
+
+Cette interface doit permettre de faire communiquer l’interface utilisateur graphique et les parties mécaniques de la machine afin de lui transmettre les ordres nécéssaires à la distribution et à la collecte des écocups.
+
+

@@ -1,0 +1,10 @@
+=== Scénarios d’usage
+
+Elève à Télécom Paris, école d’ingénieur du plateau de Saclay, Emma se rend régulièrement aux soirées étudiantes du plateau. Par souci de praticité, elle ne prend avec elle que son téléphone et n’a heureusement pas besoin de s’encombrer d’un verre : le foyer a pensé à tout. En partenariat avec les autres écoles du plateau de Saclay, le bar est doté de la machine Re(co)cup, qui va lui permettre dès son arrivée de retirer un écocup et de pouvoir la rendre à la fin de sa soirée, assurant la fin des gobelets en plastique jetables sur le plateau. 
+
+Pour Emma, le principe d’utilisation de Re(co)cup est très simple. Ayant au préalable créé un compte sur l’application associée, elle dispose de crédits sur celui-ci. Lorsqu’elle arrive à la soirée, elle se présente devant la machine, et s’identifie à l’aide de son QR code. Son ami Daniel n’a cependant plus de batterie sur son téléphone, et utilise donc l’écran tactile pour se connecter avec ses identifiants. Dans les deux cas, ils sont reconnus par la machine qui, en utilisant la base de données connectée commune, leur propose de retirer un écocup si leur crédit est suffisant. Chacun leur tour, la machine leur débite un crédit et libère un écocup propre qui leur permet de profiter de leur soirée.
+
+Prise d’une soudaine envie d’aller danser, Emma est encombrée par son écocup. Elle décide donc d’aller la reposer dans le Re(co)cup. Face à la machine, elle dispose son écocup renversée dans la cavité prévue à cet effet. Dans le cas où celle-ci n’était pas vide, l’excédent de boisson s’écoule à travers une grille. De plus, afin de limiter le risque d’erreur, la machine s’assure de l’authenticité de l'écocup grâce à un système de traitement de l’image.  Emma présente, via son téléphone, le QR-code associé à son compte Re(co)cup et récupère un crédit. Pendant qu’Emma s’en va retrouver la piste de danse, l'écocup qu’elle a utilisée est stockée dans la machine, attendant patiemment d’être lavée puis réutilisée...
+
+
+
