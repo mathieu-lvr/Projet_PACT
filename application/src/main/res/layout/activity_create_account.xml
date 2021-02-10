@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new account"
+        android:textStyle="bold"
+        android:textSize="38dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        />
+
+
+    <TextView
+        android:id="@+id/id_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identifiant"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titre"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:id="@+id/id_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="identifiant"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/id_txt"
+        />
+
+
+    <TextView
+        android:id="@+id/num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="numéro de téléphone"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/id_edit"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/num_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="06..."
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/num_txt"
+        />
+
+
+    <TextView
+        android:id="@+id/email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adresse mail"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/num_edit"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="...@..."
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/email_txt"
+        />
+
+
+    <TextView
+        android:id="@+id/mdp_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/email_edit"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/mdp_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="......."
+        android:textSize="12dp"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mdp_txt"
+        />
+
+
+    <TextView
+        android:id="@+id/confmdp_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmation du mot de passe"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mdp_edit"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/confmdp_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="......."
+        android:textSize="12dp"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/confmdp_txt"
+        />
+
+
+    <Button
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/confmdp_edit"
+        android:layout_marginTop="5dp"
+        />
+
+
+</RelativeLayout>

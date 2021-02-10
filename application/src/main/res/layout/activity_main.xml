@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--
+    <Button
+        android:id="@+id/buttonProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profil"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/statu"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/profilPict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profilPict"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crédits :"
+        android:layout_above="@+id/nbCredits"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        />
+    <!-- Stocker dans les ressources la valeur ? Autre TextView ? -->
+
+    <TextView
+        android:id="@+id/nbCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="@string/credit_val"
+        android:layout_above="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choix :"
+        android:textStyle="bold"
+        android:textSize="48dp"
+        android:layout_above="@+id/buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_above="@+id/deconnection"
+        android:layout_marginBottom="70dp"
+        >
+
+        <Button
+            android:id="@+id/buttonRetrait"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Retrait"
+            />
+
+        <Button
+            android:id="@+id/buttonDepot"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Dépôt"
+            android:layout_toRightOf="@+id/buttonRetrait"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/deconnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Déconnexion" />
+
+</RelativeLayout>

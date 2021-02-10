@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Re(co)cup</string>
+    <string name="credit_val">0</string>
+    <string name="create_new_account"><![CDATA[<u><font color =#FF0000>Créer un nouveau compte</font></u>]]></string>
+</resources>
